@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Movimiento_Camara.unity
+    path: Assets/Game/Scenes/Movimiento_Camara.unity
     guid: 49683ee194e6da94d818c208a1c7393f
   - enabled: 1
-    path: Assets/Scenes/ARScene.unity
+    path: Assets/Game/Scenes/ARScene.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 9e75eaeeb54c3b74f9aa165149e21144,
