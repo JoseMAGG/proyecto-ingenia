@@ -11,6 +11,9 @@ public class ScenarioMovement : MonoBehaviour
     private int currentPedestal = -1;
     private bool isMoving;
 
+    public Vector3 moveDirection;
+    public float stopDistance;
+
     void Start()
     {
         MoveToNext();
@@ -21,9 +24,9 @@ public class ScenarioMovement : MonoBehaviour
     {
         if (isMoving)
         {
-            transform.Translate(Vector3.forward * -1 * speed * Time.deltaTime);
+            transform.Translate(Vector3.Normalize(moveDirection) * speed * Time.deltaTime);
         }
-        if (Mathf.Abs(cameraTransform.position.z - nextPedestal.transform.position.z) < 0.5f)
+        if (Mathf.Abs(cameraTransform.position.z - nextPedestal.transform.position.z) < stopDistance)
         {
             Pause();
         }
