@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabd1038e546980489bc8ac29dba7db6, type: 3}
   m_Name: Scenario Config
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   moveDirection: {x: 0, y: 0, z: -1}
   cycleLength: 36
   stopDistance: 10
-  isMoving: 1
+  isMoving: 0
   cityDistance: 3
