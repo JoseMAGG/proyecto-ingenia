@@ -8,12 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hologram Purple
-  m_Shader: {fileID: -6465566751694194690, guid: b4445a11a5d463d418e4b7b7f44857b9,
+  m_Shader: {fileID: -6465566751694194690, guid: 7a7fe97f955b93443835c7afff2daf1f,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _RECEIVE_SHADOWS_OFF
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -42,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HologramScanlines:
-        m_Texture: {fileID: 2800000, guid: 3c3561f0603e95940b123badfe0f2511, type: 3}
+        m_Texture: {fileID: 2800000, guid: 85b14f8dea26f424eb6f38ccac817ccb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:

@@ -6,19 +6,45 @@ using UnityEngine.EventSystems;
 
 public class PedestalsMovement : MonoBehaviour
 {
-    public List<Transform> pedestals = new List<Transform>();
+    public List<Pedestal> pedestals = new List<Pedestal>();
     public float betweenDistance;
     public Transform cameraTransform;
     public ScenarioConfig config;
     public AnimationClip startAnimation;
+    public AnimationClip endAnimation;
+    public Animator animator;
 
-    private Transform nextPedestal;
+    private Pedestal nextPedestal;
     private int currentPedestal = -1;
-    private Transform lastPedestal;
+    private Pedestal lastPedestal;
+    private int pedestalCount = 0;
+    private bool isEnd;
+    private bool isMoving;
+
+    #region Singleton
+    private static PedestalsMovement instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
+    public static PedestalsMovement GetInstance()
+    {
+        return instance;
+    }
+    #endregion
 
     void Start()
     {
-        Pause();
+        config.isMoving = false;
         PlacePedestals();
     }
 
@@ -26,32 +52,47 @@ public class PedestalsMovement : MonoBehaviour
     {
         for (int i = 0; i < pedestals.Count; i++)
         {
-            Vector3 position = pedestals[i].position;
+            Vector3 position = pedestals[i].transform.position;
             position.z = betweenDistance * (i + 1);
-            pedestals[i].position = position;
+            pedestals[i].transform.position = position;
         }
 
     }
 
     void Update()
     {
-        if (config.isMoving)
+        if (config.isMoving && !isEnd)
         {
             transform.Translate(Vector3.Normalize(config.moveDirection) * config.speed * Time.deltaTime);
-            if (Mathf.Abs(cameraTransform.position.z - nextPedestal.position.z) < config.stopDistance)
+            if (Mathf.Abs(cameraTransform.position.z - nextPedestal.transform.position.z) < config.stopDistance)
             {
                 Pause();
             }
         }
         if (lastPedestal != null)
         {
-            if (cameraTransform.position.z - lastPedestal.position.z > config.stopDistance)
-            {
-                Vector3 position = lastPedestal.localPosition;
-                position.z += betweenDistance * 2;
-                lastPedestal.localPosition = position;
-            }
+            CheckMovePedestal();
         }
+    }
+
+    private void CheckMovePedestal()
+    {
+        if (cameraTransform.position.z - lastPedestal.transform.position.z > config.stopDistance
+                        && pedestalCount < ProductsInfo.GetInstance().GetQuestionsCount())
+        {
+            if (!isMoving) StartCoroutine(MovePedestal());
+        }
+    }
+
+    private IEnumerator MovePedestal()
+    {
+        isMoving = true;
+        lastPedestal.ResetAnimation();
+        Vector3 position = lastPedestal.transform.localPosition;
+        yield return new WaitForSeconds(0.5f);
+        position.z += betweenDistance * 2;
+        lastPedestal.transform.localPosition = position;
+        isMoving = false;
     }
 
     private bool NextPedestal()
@@ -74,6 +115,22 @@ public class PedestalsMovement : MonoBehaviour
     private void Pause()
     {
         config.isMoving = false;
+        pedestalCount++;
+        string text;
+        Sprite icon;
+        bool isNext = ProductsInfo.GetInstance().SetNextQuestion(out text, out icon);
+        if (isNext)
+        {
+            nextPedestal.quesiton.text = text;
+            nextPedestal.icon.sprite = icon;
+            nextPedestal.ShowInfo();
+        }
+        else
+        {
+            print(ProductsInfo.GetInstance().GetAnswers().ToString());
+            StartCoroutine(End());
+        }
+
     }
     public void StartPressed()
     {
@@ -83,6 +140,25 @@ public class PedestalsMovement : MonoBehaviour
     private IEnumerator WaitForStart()
     {
         yield return new WaitForSeconds(startAnimation.length);
+        Move();
+    }
+
+    private IEnumerator End()
+    {
+        isEnd = true;
+        foreach (Pedestal pedestal in pedestals)
+        {
+            pedestal.gameObject.SetActive(false);
+        }
+        config.isMoving = true;
+        animator.SetTrigger("End");
+        yield return new WaitForSeconds(endAnimation.length);
+        config.isMoving = false;
+    }
+
+    internal void CatchAnswer(bool isYes)
+    {
+        ProductsInfo.GetInstance().SaveAnswer(isYes);
         Move();
     }
 }
