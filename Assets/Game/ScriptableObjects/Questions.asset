@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb47825abb1331c4e9e290fcbdc7b709, type: 3}
+  m_Script: {fileID: 11500000, guid: b4ddd7483262c6c48992bca1b411fbf6, type: 3}
   m_Name: Questions
   m_EditorClassIdentifier: 
   questionList:
   - "\xBFEst\xE1 buscando una forma eficiente de capacitar a su equipo con rutas
     de aprendizaje din\xE1micas y utilizando la tecnolog\xEDa? "
-  - "\xBFNecesita contenido educativo atractivo y efectivo para sus cursos en l\xEDnea? "
   - "\xBFNecesita contenido educativo atractivo y efectivo para sus cursos en l\xEDnea? "
   - "\xBFNecesita un soporte t\xE9cnico \xE1gil y efectivo para los usuarios de sus
     proyectos tecnol\xF3gicos? "
@@ -25,3 +24,10 @@ MonoBehaviour:
     ajuste a sus requerimientos? "
   - "\xBFLe preocupa el bienestar emocional y psicol\xF3gico de sus estudiantes,
     tutores o colaboradores en entornos virtuales? "
+  questionImages:
+  - {fileID: 21300000, guid: b21c1482f1a75dd42a1d05858593b6e1, type: 3}
+  - {fileID: 21300000, guid: 82177e417b63bdd438e11b7caed5fce0, type: 3}
+  - {fileID: 21300000, guid: 13ff0bce46054e245ba7d8b0d28bf551, type: 3}
+  - {fileID: 21300000, guid: 9296672efc8be854e9bc529cbd6273a8, type: 3}
+  - {fileID: 21300000, guid: 289f688867ea62d49b3264e994f3293c, type: 3}
+  - {fileID: 21300000, guid: 84a3bd7e98fe3dc4f979ff3e1200cd91, type: 3}
