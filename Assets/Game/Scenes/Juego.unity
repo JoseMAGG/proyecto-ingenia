@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0069148964, g: 0.017940314, b: 0.0796223, a: 1}
+  m_IndirectSpecularColor: {r: 0.05774194, g: 0.12653846, b: 0.30942136, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2987,10 +2987,10 @@ RectTransform:
   - {fileID: 1786765811}
   m_Father: {fileID: 1643325565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &851498317
 Animator:
@@ -3708,7 +3708,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 369.23077}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1555698905
 MonoBehaviour:
@@ -5302,6 +5302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionsInfo: {fileID: 11400000, guid: 49da8c3166dbd9d49926ff1573fd44ec, type: 2}
+  answersInfo: {fileID: 11400000, guid: cdfdadb7c96d85c44bef7117baa7bfcd, type: 2}
 --- !u!4 &2024702468
 Transform:
   m_ObjectHideFlags: 0

@@ -25,9 +25,9 @@ MonoBehaviour:
   - "\xBFLe preocupa el bienestar emocional y psicol\xF3gico de sus estudiantes,
     tutores o colaboradores en entornos virtuales? "
   questionImages:
-  - {fileID: 21300000, guid: b21c1482f1a75dd42a1d05858593b6e1, type: 3}
-  - {fileID: 21300000, guid: 82177e417b63bdd438e11b7caed5fce0, type: 3}
-  - {fileID: 21300000, guid: 13ff0bce46054e245ba7d8b0d28bf551, type: 3}
-  - {fileID: 21300000, guid: 9296672efc8be854e9bc529cbd6273a8, type: 3}
-  - {fileID: 21300000, guid: 289f688867ea62d49b3264e994f3293c, type: 3}
-  - {fileID: 21300000, guid: 84a3bd7e98fe3dc4f979ff3e1200cd91, type: 3}
+  - {fileID: 21300000, guid: 88816dd3a5da22b4ca41566414882515, type: 3}
+  - {fileID: 21300000, guid: 35a27dc59d5934442be14a27875f686e, type: 3}
+  - {fileID: 21300000, guid: 15d567484a71faa4098cac9fecc1cdc0, type: 3}
+  - {fileID: 21300000, guid: 012e7a395366aa0458adaad561a15ee5, type: 3}
+  - {fileID: 21300000, guid: b4aff350c66fab6418155426411c66a1, type: 3}
+  - {fileID: 21300000, guid: f207cc508f9a03548b09e483722fb077, type: 3}

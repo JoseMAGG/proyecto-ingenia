@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PedestalsMovement : MonoBehaviour
 {
@@ -127,7 +128,6 @@ public class PedestalsMovement : MonoBehaviour
         }
         else
         {
-            print(ProductsInfo.GetInstance().GetAnswers().ToString());
             StartCoroutine(End());
         }
 
@@ -154,6 +154,7 @@ public class PedestalsMovement : MonoBehaviour
         animator.SetTrigger("End");
         yield return new WaitForSeconds(endAnimation.length);
         config.isMoving = false;
+        SceneManager.LoadScene(1);
     }
 
     internal void CatchAnswer(bool isYes)
