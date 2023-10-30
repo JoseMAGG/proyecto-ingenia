@@ -56,14 +56,14 @@ public class ProductShowcase : MonoBehaviour
         isMoving = true;
         float nextAngle = (transform.rotation.eulerAngles.y + angleFraction) % 360f;
         float speed = angleFraction / timeToRotate * Time.deltaTime;
-        float rotationY = transform.rotation.eulerAngles.y;
+        float rotationY = transform.localRotation.eulerAngles.y;
         do
         {
             rotationY = (rotationY + speed) % 360f;
-            transform.rotation = Quaternion.Euler(0, rotationY, 0);
+            transform.localRotation = Quaternion.Euler(0, rotationY, 0);
             yield return new WaitForEndOfFrame();
         } while (MathF.Abs(rotationY - nextAngle) > speed);
-        transform.rotation = Quaternion.Euler(0, nextAngle, 0);
+        transform.localRotation = Quaternion.Euler(0, nextAngle, 0);
         isMoving = false;
         canMove = false;
     }
