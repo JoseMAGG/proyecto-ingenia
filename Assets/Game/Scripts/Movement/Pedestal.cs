@@ -18,7 +18,7 @@ public class Pedestal : MonoBehaviour
 
     void Update()
     {
-        transform.rotation = Quaternion.LookRotation(camera.transform.forward);
+        //transform.rotation = Quaternion.LookRotation(camera.transform.forward);
     }
 
     public void ResetAnimation()
