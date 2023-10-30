@@ -14,6 +14,8 @@ EditorBuildSettings:
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: a9b5298130c018d4c940f0fb7da64e8e,
       type: 2}
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
+      guid: 0e600879bcb9d42458af93179aaad042, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 9e75eaeeb54c3b74f9aa165149e21144,
       type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
