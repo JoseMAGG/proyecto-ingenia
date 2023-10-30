@@ -17,4 +17,4 @@ MonoBehaviour:
   cycleLength: 36
   stopDistance: 10
   isMoving: 0
-  cityDistance: 3
+  cityDistance: 2

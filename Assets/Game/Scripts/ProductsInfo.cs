@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ProductsInfo : MonoBehaviour
 {
-    public Questions questionsInfo;
+    [SerializeField] private Questions questionsInfo;
+    [SerializeField] private Answers answersInfo;
     private int counter;
-    private bool[] answers;
 
     private static ProductsInfo instance;
 
@@ -20,7 +20,6 @@ public class ProductsInfo : MonoBehaviour
         {
             Destroy(this);
         }
-        answers = new bool[questionsInfo.QuestionList.Count];
     }
 
     public static ProductsInfo GetInstance()
@@ -44,9 +43,8 @@ public class ProductsInfo : MonoBehaviour
 
     public void SaveAnswer(bool answer)
     {
-        answers[counter - 1] = answer;
+        answersInfo.AnswersList[counter - 1] = answer;
     }
-    public bool[] GetAnswers() { return answers; }
 
     public int GetQuestionsCount() { return questionsInfo.QuestionList.Count; }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PedestalsMovement : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class PedestalsMovement : MonoBehaviour
     public ScenarioConfig config;
     public AnimationClip startAnimation;
     public AnimationClip endAnimation;
-    public Animator animator;
+    public Animator endAnimator;
+    public Animator carAnimator;
 
     private Pedestal nextPedestal;
     private int currentPedestal = -1;
@@ -123,11 +125,11 @@ public class PedestalsMovement : MonoBehaviour
         {
             nextPedestal.quesiton.text = text;
             nextPedestal.icon.sprite = icon;
+            nextPedestal.icon.preserveAspect = true;
             nextPedestal.ShowInfo();
         }
         else
         {
-            print(ProductsInfo.GetInstance().GetAnswers().ToString());
             StartCoroutine(End());
         }
 
@@ -151,9 +153,11 @@ public class PedestalsMovement : MonoBehaviour
             pedestal.gameObject.SetActive(false);
         }
         config.isMoving = true;
-        animator.SetTrigger("End");
+        endAnimator.SetTrigger("End");
+        carAnimator.SetTrigger("End");
         yield return new WaitForSeconds(endAnimation.length);
         config.isMoving = false;
+        SceneManager.LoadScene(1);
     }
 
     internal void CatchAnswer(bool isYes)
