@@ -18,12 +18,22 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 4829194789716313032
-      m_GuidHigh: 2003581382554420155
+      m_GuidLow: 5745904140278227077
+      m_GuidHigh: 14176179285478523311
     m_SerializedTextureGuid:
-      m_GuidLow: 16880730480963912524
-      m_GuidHigh: 4609637681578274889
-    m_Size: {x: 0.18, y: 0.25422925}
+      m_GuidLow: 11670088255595193755
+      m_GuidHigh: 3387875208202687594
+    m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: brook
-    m_Texture: {fileID: 2800000, guid: 3af6834c66efea444970ba690cb9f83f, type: 3}
+    m_Name: QR
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5473100789203645375
+      m_GuidHigh: 4405661470669843350
+    m_SerializedTextureGuid:
+      m_GuidLow: 12476234779674617585
+      m_GuidHigh: 14084591489037937914
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: QR ingenia logo
+    m_Texture: {fileID: 0}
