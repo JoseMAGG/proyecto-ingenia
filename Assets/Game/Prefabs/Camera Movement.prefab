@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4869e0f03dc525469f26a99da87412d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
   angularSpeed: 1
   invertHorizontal: 0
   invertVertical: 1
