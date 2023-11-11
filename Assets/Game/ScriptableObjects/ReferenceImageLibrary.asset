@@ -18,22 +18,12 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5745904140278227077
-      m_GuidHigh: 14176179285478523311
+      m_GuidLow: 5284206346903772682
+      m_GuidHigh: 7511208281434088382
     m_SerializedTextureGuid:
-      m_GuidLow: 11670088255595193755
-      m_GuidHigh: 3387875208202687594
+      m_GuidLow: 2725870012849311815
+      m_GuidHigh: 6456757397387751193
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: QR
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 5473100789203645375
-      m_GuidHigh: 4405661470669843350
-    m_SerializedTextureGuid:
-      m_GuidLow: 12476234779674617585
-      m_GuidHigh: 14084591489037937914
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: QR ingenia logo
+    m_Name: QR descargar apk
     m_Texture: {fileID: 0}
