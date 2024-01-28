@@ -24,4 +24,16 @@ La aplicación es compatible con dispositivos de gama media-alta, con android 8.
 
 ----------------------------------- Instalación de la aplicación -----------------------------------
 
-Puedes compilar el proyecto en Unity para crear un APK, alternativamente, instala el APK de la aplicación directamente.
+Puedes compilar el proyecto en Unity para crear un APK, alternativamente, instala el APK de la aplicación directamente, la cuál se encuentra en la carpeta "_apk" o en el enlace de drive. 
+
+----------------------------------- Instalar aplicacion de otras fuentes en android ----------------
+
+Si tienes problemas para instalar la aplicación en un dispositivo android posiblemente sea porque la fuente de descarga es diferente a play store. Para permitir instalar la aplicación de otras fuentes como Whatsapp, Drive o un navegador sigue estos pasos:
+
+1. Abrir las configuraciones del dispositivo móvil.
+2. Seleccionar la opción de "Aaplicaciones" o similar.
+3. Seleccionar la aplicación desde la cuál se va a instalar el apk.
+4. En la sección de avanzados, ubicar la opción "Instalar aplicaciones desconocidas" o similar y seleccionarla.
+5. Marcar la opción "Permitir desde esta fuente" o similar.
+
+Una vez activada la opción que permite instalar aplicaciones desde otras fuentes, puedes ir a instalar el apk con normalidad.
